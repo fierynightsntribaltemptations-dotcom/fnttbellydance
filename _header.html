@@ -1,0 +1,30 @@
+  <header class="fn-header">
+    <div class="fn-header-inner">
+      <a href="index.html" class="fn-logo-wrap">
+        <img src="fntt-logo-transparent.png" alt="Fiery Nights & Tribal Temptations Belly Dance Logo" class="fn-logo-img" />
+        <div class="fn-logo-text">
+          <span class="fn-logo-abbr">FN&TT</span>
+          <span class="fn-logo-full">Fiery Nights &amp; Tribal Temptations</span>
+        </div>
+      </a>
+      <nav class="fn-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="classes.html">Classes</a>
+        <a href="fire-program.html">Fire Program</a>
+        <a href="events.html">Events</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="fn-hamburger" aria-label="Open menu" onclick="document.getElementById('fn-drawer').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="fn-nav-drawer" id="fn-drawer">
+      <a href="index.html" onclick="this.closest('#fn-drawer').classList.remove('open')">Home</a>
+      <a href="about.html">About</a>
+      <a href="classes.html">Classes</a>
+      <a href="fire-program.html">Fire Program</a>
+      <a href="events.html">Events</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>

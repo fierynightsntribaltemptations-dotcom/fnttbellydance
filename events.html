@@ -3,15 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Events – Fiery Nights & Tribal Temptations | Northern Kentucky</title>
-  <meta name="description" content="Drake von Trapp Workshop Weekend July 25-26 2026 in Newport & Fort Thomas Kentucky. Three workshops plus the Echoes Hafla. Only 12 spots — register now!" />
+  <title>Events – Fiery Nights &amp; Tribal Temptations | FN&TT | Northern Kentucky</title>
+  <meta name="description" content="Drake von Trapp Workshop Weekend July 25-26 2026 in Newport &amp; Fort Thomas Kentucky. Three workshops plus the Echoes Hafla. Limited spots — register now!" />
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&display=swap" rel="stylesheet" />
 </head>
 <body class="fn-body">
+
   <header class="fn-header">
     <div class="fn-header-inner">
-      <div class="fn-logo">FN&TT</div>
+      <a href="index.html" class="fn-logo-wrap">
+        <img src="fntt-logo-transparent.png" alt="Fiery Nights &amp; Tribal Temptations Belly Dance Logo" class="fn-logo-img" />
+        <div class="fn-logo-text">
+          <span class="fn-logo-abbr">FN&amp;TT</span>
+          <span class="fn-logo-full">Fiery Nights &amp; Tribal Temptations</span>
+        </div>
+      </a>
       <nav class="fn-nav">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
@@ -20,34 +27,41 @@
         <a href="events.html">Events</a>
         <a href="contact.html">Contact</a>
       </nav>
+      <button class="fn-hamburger" aria-label="Open menu" onclick="document.getElementById('fn-drawer').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
     </div>
+    <nav class="fn-nav-drawer" id="fn-drawer">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="classes.html">Classes</a>
+      <a href="fire-program.html">Fire Program</a>
+      <a href="events.html">Events</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </header>
 
   <main>
     <section class="fn-hero">
       <h1>Events</h1>
       <p>
-        Community markets, haflas, showcases, and immersive themed experiences that celebrate dance,
-        artistry, and local creators in Northern Kentucky.
+        Community markets, haflas, showcases, and immersive dance experiences that celebrate
+        artistry and local community across Northern Kentucky.
       </p>
     </section>
 
     <!-- FEATURED EVENT -->
-    <section class="fn-section">
-      <h2>⭐ Upcoming Event</h2>
-
+    <section class="fn-section fn-spotlight">
       <div class="fn-card fn-card-featured">
-        <p class="fn-event-tag">⚠️ Only 12 Spots — Register Now!</p>
+        <p class="fn-event-tag">⚠️ Limited Spots — Register Now!</p>
         <h3>Drake von Trapp Workshop Weekend</h3>
-        <p class="fn-event-date">📅 July 25–26, 2026 | Newport & Fort Thomas, KY</p>
+        <p class="fn-event-date">📅 July 25–26, 2026 · Newport &amp; Fort Thomas, KY</p>
+
+        <img src="fntt-drake-vontrapp-flyer.png" alt="Drake von Trapp Echoes and Origins Weekend belly dance workshop flyer" class="fn-flyer-img" />
+
         <p>
-          Join us for a full weekend of lineage, evolution, rhythm, and community with Drake von Trapp —
-          featuring three immersive Tribal Fusion workshops plus an evening Hafla celebrating dancers
-          of all styles.
-        </p>
-        <p>
-          Whether you're reconnecting with your fusion roots or ready to level up your technique,
-          this weekend has something for every dedicated dancer. Don't wait — spots are limited!
+          A full weekend of lineage, evolution, rhythm, and community with Drake von Trapp —
+          three immersive Tribal Fusion workshops plus an evening Hafla celebrating dancers of all styles.
         </p>
         <a class="fn-btn" href="https://airtable.com/app8OIeHsQbBY35iT/pag70W0pC6p7SOC8q/form" target="_blank" rel="noopener">Register Now</a>
       </div>
@@ -55,21 +69,36 @@
       <!-- PRICING -->
       <div class="fn-card">
         <h3>💰 Pricing Options</h3>
-        <ul>
-          <li><strong>Single Workshop:</strong> $75 each</li>
-          <li><strong>Any 2 Workshops:</strong> $165</li>
-          <li><strong>All 3 Workshops:</strong> $225 — <strong>Hafla included FREE!</strong> 🎉</li>
-          <li><strong>Hafla Only:</strong> $15</li>
-        </ul>
-        <p>💳 Need a payment plan? We've got you! Select that option when you register.</p>
-        <a class="fn-btn" href="https://airtable.com/app8OIeHsQbBY35iT/pag70W0pC6p7SOC8q/form" target="_blank" rel="noopener">Register & Select Your Option</a>
+        <div class="fn-pricing-grid">
+          <div class="fn-price-card">
+            <div class="fn-price-label">Single Workshop</div>
+            <div class="fn-price-amount">$75</div>
+            <div class="fn-price-detail">Per workshop</div>
+          </div>
+          <div class="fn-price-card">
+            <div class="fn-price-label">Any 2 Workshops</div>
+            <div class="fn-price-amount">$165</div>
+            <div class="fn-price-detail">Save $15</div>
+          </div>
+          <div class="fn-price-card featured">
+            <div class="fn-price-label">All 3 + Hafla FREE</div>
+            <div class="fn-price-amount">$225</div>
+            <div class="fn-price-detail">Best value! 🎉</div>
+          </div>
+          <div class="fn-price-card">
+            <div class="fn-price-label">Hafla Only</div>
+            <div class="fn-price-amount">$15</div>
+            <div class="fn-price-detail">Sunday evening</div>
+          </div>
+        </div>
+        <p>💳 Need a payment plan? Select that option when you register!</p>
+        <a class="fn-btn" href="https://airtable.com/app8OIeHsQbBY35iT/pag70W0pC6p7SOC8q/form" target="_blank" rel="noopener">Register &amp; Select Your Option</a>
       </div>
 
       <!-- SATURDAY -->
       <h3 style="color: var(--accent-soft); font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; margin: 2rem 0 1rem;">
         ❤️‍🔥 Saturday, July 25 — Workshops
       </h3>
-
       <div class="fn-card">
         <p class="fn-event-date">📍 The Kula Center for the Movement Arts</p>
         <p style="color: var(--muted); margin-bottom: 1.5rem;">110 E. 8th Street, Newport, KY 41071</p>
@@ -77,12 +106,7 @@
         <div style="border-top: 1px solid rgba(244,197,140,0.18); padding-top: 1.5rem; margin-bottom: 1.5rem;">
           <p class="fn-event-date">12:00–2:00 PM — Workshop 1: Something Old, Something New</p>
           <p><strong>Type:</strong> Combos, Stylization &nbsp;|&nbsp; <strong>Level:</strong> Intermediate</p>
-          <p>
-            A throwback to the foundations that shaped West Coast fusion. Explore influences from
-            Jamila Salimpour, Bal Anat, John Compton, Hahbi'Ru, and more. Perfect for dancers wanting
-            to reconnect with their fusion heritage or indulge in some vintage nostalgia woven into
-            modern technique.
-          </p>
+          <p>A throwback to the foundations that shaped West Coast fusion. Explore influences from Jamila Salimpour, Bal Anat, John Compton, Hahbi'Ru, and more.</p>
         </div>
 
         <div style="border-top: 1px solid rgba(244,197,140,0.18); padding-top: 1.5rem; margin-bottom: 1.5rem;">
@@ -92,15 +116,8 @@
         <div style="border-top: 1px solid rgba(244,197,140,0.18); padding-top: 1.5rem;">
           <p class="fn-event-date">2:30–4:30 PM — Workshop 2: Killer Ziller: Finger Cymbal Combos</p>
           <p><strong>Type:</strong> Combos, Technique &nbsp;|&nbsp; <strong>Level:</strong> All Levels Welcome! 🥰</p>
-          <p>
-            Break out of the RLR RLR RLR purgatory and expand your cymbal vocabulary! Drake will guide
-            you through multi-tonal techniques, Salimpour-style patterns, and clever fusion combos
-            designed to challenge your brain and musicality.
-          </p>
-          <p>
-            If you're on the fence or think you don't have enough skills — fear not! Drake has confirmed
-            this class will be adjusted to the speed of the class. You've got this! 💪
-          </p>
+          <p>Break out of the RLR purgatory and expand your cymbal vocabulary! Multi-tonal techniques, Salimpour-style patterns, and clever fusion combos.</p>
+          <p>Drake has confirmed this class will be adjusted to the speed of the class. You've got this! 💪</p>
           <p><strong>Recommended:</strong> Finger cymbals 2.5–3" in diameter.</p>
         </div>
       </div>
@@ -109,23 +126,13 @@
       <h3 style="color: var(--accent-soft); font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; margin: 2rem 0 1rem;">
         ❤️‍🔥 Sunday, July 26 — Workshop + Hafla
       </h3>
-
       <div class="fn-card">
-        <p class="fn-event-date">📍 Mary & Don Haas Blackbox Theatre</p>
+        <p class="fn-event-date">📍 Mary &amp; Don Haas Blackbox Theatre</p>
         <p style="color: var(--muted); margin-bottom: 1.5rem;">8 N Fort Thomas Ave, Fort Thomas, KY 41075</p>
-
         <div style="border-top: 1px solid rgba(244,197,140,0.18); padding-top: 1.5rem;">
           <p class="fn-event-date">11:00 AM–1:00 PM — Workshop 3: Ephemera: Old School Choreography</p>
           <p><strong>Type:</strong> Choreography, Stylization, History &nbsp;|&nbsp; <strong>Level:</strong> Intermediate</p>
-          <p>
-            If you've ever wistfully looked back at Renaissance faire belly dance videos from the 90s
-            and early 2000s and wished you could hop in a time machine — look no further! This
-            choreography is modeled after legendary troupes such as Hahbi'Ru, Middle Eastern Dance
-            Ensemble, Ottoman Traders, and Bal Anat.
-          </p>
-          <p>
-            When it's over, enjoy time with friends, grab a bite, and relax before the show starts at 6:00 PM! ❤️‍🔥
-          </p>
+          <p>Modeled after legendary troupes: Hahbi'Ru, Middle Eastern Dance Ensemble, Ottoman Traders, and Bal Anat. A time machine to belly dance history!</p>
         </div>
       </div>
 
@@ -134,46 +141,21 @@
         <p class="fn-event-tag">Sunday Evening</p>
         <h3>The Echoes Hafla</h3>
         <p class="fn-event-date">📅 Sunday, July 26 | 6:00–9:00 PM</p>
-        <p class="fn-event-date">📍 Mary & Don Haas Blackbox Theatre, Fort Thomas, KY</p>
-        <p>
-          Celebrate the weekend with an intimate community Hafla featuring performers from across
-          the region. Drake von Trapp will be performing! ❤️‍🔥
-        </p>
-        <p>
-          The venue includes a full blackbox theatre with lighting, sound, dressing rooms, and
-          accessible restrooms — perfect for an amazing performance experience.
-        </p>
-        <p><strong>Hafla Only tickets: $15 &nbsp;|&nbsp; Free with all 3 workshops!</strong></p>
+        <p class="fn-event-date">📍 Mary &amp; Don Haas Blackbox Theatre, Fort Thomas, KY</p>
+        <p>Celebrate the weekend with an intimate community Hafla featuring performers from across the region. Drake von Trapp will be performing! ❤️‍🔥</p>
+        <p><strong>Hafla Only: $15 &nbsp;|&nbsp; Free with all 3 workshops!</strong></p>
         <a class="fn-btn" href="https://airtable.com/app8OIeHsQbBY35iT/pag70W0pC6p7SOC8q/form" target="_blank" rel="noopener">Register Now</a>
       </div>
 
       <!-- DRAKE BIO -->
       <div class="fn-card">
         <h3>Meet Your Instructor — Drake von Trapp</h3>
-        <p>
-          Drake von Trapp is a belly dance historian, researcher, teacher, and performer, recognized
-          for his pioneering research on male belly dancers in the U.S. He holds a BA and MA in Dance,
-          a post-master's in Multicultural Women's and Gender Studies from Texas Woman's University,
-          and is currently pursuing a PhD in Performance Studies at UT Austin.
-        </p>
-        <p>
-          His background is an interplay of fusion and American cabaret belly dance, combined with
-          interdisciplinary training in contemporary modern, ballet, and West African dance. Drake
-          primarily performs what he refers to as "old style" fusion belly dance, taking cues from
-          the Salimpourean, Bricean, and American cabaret traditions.
-        </p>
-        <p>
-          Drake is a Stage 1, 2, and 3 Trained Teacher in April Rose's Dance Cohesion program, and
-          Level 1 certified in both Suhaila and Jamila Salimpour formats. He shares his work through
-          touring, teaching, and performing internationally.
-        </p>
+        <p>Drake von Trapp is a belly dance historian, researcher, teacher, and performer — recognized for his pioneering research on male belly dancers in the U.S. He holds a BA and MA in Dance and a post-master's in Multicultural Women's and Gender Studies from Texas Woman's University, and is pursuing a PhD in Performance Studies at UT Austin.</p>
         <p><strong>Find Drake online:</strong></p>
         <ul>
           <li>🌐 <a href="https://www.DrakevonTrapp.dance" target="_blank" rel="noopener" style="color: var(--accent-soft);">DrakevonTrapp.dance</a></li>
-          <li>🎓 <a href="https://www.ArcanumDance.com" target="_blank" rel="noopener" style="color: var(--accent-soft);">ArcanumDance.com</a></li>
           <li>📸 Instagram: <a href="https://www.instagram.com/drake.vontrapp" target="_blank" rel="noopener" style="color: var(--accent-soft);">@drake.vontrapp</a></li>
           <li>📘 Facebook: <a href="https://www.facebook.com/drake.vontrapp" target="_blank" rel="noopener" style="color: var(--accent-soft);">/drake.vontrapp</a></li>
-          <li>🎥 YouTube & TikTok: @drakevontrapp</li>
           <li>❤️ Patreon: <a href="https://www.patreon.com/drakevontrapp" target="_blank" rel="noopener" style="color: var(--accent-soft);">patreon.com/drakevontrapp</a></li>
         </ul>
       </div>
@@ -183,14 +165,11 @@
     <section class="fn-section">
       <h2>Community Markets</h2>
       <div class="fn-card">
-        <p>
-          FN&TT hosts warm, inclusive community markets featuring local artists, youth vendors,
-          handmade goods, and live performances in Northern Kentucky.
-        </p>
+        <p>FN&amp;TT hosts warm, inclusive community markets featuring local artists, youth vendors, handmade goods, and live performances in Northern Kentucky — including the Schoolyard Winery Farmers Market in Verona, KY.</p>
         <ul>
           <li>Local artisans and makers</li>
-          <li>Youth vendor booths</li>
-          <li>Live music and dance</li>
+          <li>Youth vendor booths &amp; mentorship</li>
+          <li>Live music and dance performances</li>
           <li>Food, wine, beer, and bourbon cocktails</li>
         </ul>
         <a class="fn-btn" href="contact.html">Vendor Inquiries</a>
@@ -206,13 +185,17 @@
 
   <footer class="fn-footer">
     <div class="fn-footer-inner">
-      <p>Fiery Nights & Tribal Temptations Belly Dance LLC</p>
-      <p>Dry Ridge & Verona, Kentucky</p>
+      <img src="fntt-logo-transparent.png" alt="FN&TT Logo" style="height:60px; margin-bottom:0.75rem;" />
+      <p><strong>Fiery Nights &amp; Tribal Temptations Belly Dance LLC</strong></p>
+      <p>FN&amp;TT | Verona &amp; Dry Ridge, Kentucky</p>
       <div class="fn-social">
-        <a href="https://www.facebook.com/share/1CQ35tfrSS/" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.facebook.com/share/1CQ35tfrSS/" target="_blank" rel="noopener">
+          <img src="fntt-facebook-icon.png" alt="Facebook" style="height:44px;" />
+        </a>
       </div>
-      <p class="fn-footer-copy">© 2026 Fiery Nights & Tribal Temptations Belly Dance LLC. All rights reserved.</p>
+      <p class="fn-footer-copy">© 2026 Fiery Nights &amp; Tribal Temptations Belly Dance LLC. All rights reserved.</p>
     </div>
   </footer>
+
 </body>
 </html>
