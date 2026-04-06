@@ -1,341 +1,92 @@
-/* ============================================
-   FN&TT — Fiery Nights & Tribal Temptations
-   Stylesheet — 2026 Edition
-   ============================================ */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact – Fiery Nights & Tribal Temptations | Northern Kentucky</title>
+  <meta name="description" content="Contact Fiery Nights & Tribal Temptations in Dry Ridge & Verona, Kentucky. Classes, events, vendor inquiries, and performance bookings." />
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body class="fn-body">
+  <header class="fn-header">
+    <div class="fn-header-inner">
+      <div class="fn-logo">FN&TT</div>
+      <nav class="fn-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="classes.html">Classes</a>
+        <a href="fire-program.html">Fire Program</a>
+        <a href="events.html">Events</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&display=swap');
+  <main>
+    <section class="fn-hero">
+      <h1>Contact</h1>
+      <p>
+        Ready to connect, collaborate, or join the FN&TT community?
+        Reach out anytime — we'd love to hear from you.
+      </p>
+    </section>
 
-:root {
-  --bg: #0b050b;
-  --accent: #e46b3c;
-  --accent-soft: #f3c28b;
-  --ink: #f7f2ec;
-  --muted: #c9b9aa;
-  --card: #1a101a;
-}
+    <section class="fn-section">
+      <h2>Get in Touch</h2>
+      <div class="fn-card">
+        <p>
+          Whether you're interested in classes, events, vendor opportunities, performance bookings,
+          or the fire program — FN&TT is here to support your journey.
+        </p>
+        <p><strong>Email:</strong> <a href="mailto:info@fierynightsandtribaltemptations.com" style="color: var(--accent-soft);">info@fierynightsandtribaltemptations.com</a></p>
+        <p><strong>Location:</strong> Dry Ridge & Verona, Kentucky (Northern Kentucky)</p>
+        <p><strong>Follow us:</strong>
+          <a href="https://www.facebook.com" target="_blank" rel="noopener" style="color: var(--accent-soft); margin-left: 0.5rem;">Facebook</a> |
+          <a href="https://www.instagram.com" target="_blank" rel="noopener" style="color: var(--accent-soft); margin-left: 0.5rem;">Instagram</a>
+        </p>
+      </div>
+    </section>
 
-* {
-  box-sizing: border-box;
-}
+    <section class="fn-section">
+      <h2>We'd Love to Hear About</h2>
+      <div class="fn-card">
+        <ul>
+          <li>Class enrollment and scheduling questions</li>
+          <li>Workshop and event registration</li>
+          <li>Performance booking inquiries</li>
+          <li>Vendor booth applications for community markets</li>
+          <li>Fire program questions</li>
+          <li>Collaboration and partnership opportunities</li>
+        </ul>
+      </div>
+    </section>
 
-body.fn-body {
-  margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: radial-gradient(circle at top, #2a102a 0, #050308 55%, #020104 100%);
-  color: var(--ink);
-}
+    <!-- CONTACT FORM (AIRTABLE EMBED) -->
+    <section class="fn-section">
+      <h2>Send a Message</h2>
+      <p>Use the form below to contact FN&TT. We'll get back to you as soon as possible.</p>
+      <iframe
+        class="airtable-embed"
+        src="https://airtable.com/app8OIeHsQbBY35iT/pagbT61BO7i24seSa/form"
+        frameborder="0"
+        width="100%"
+        height="900"
+        style="background: transparent; border: 1px solid rgba(244,197,140,0.18); border-radius: 1rem;">
+      </iframe>
+    </section>
+  </main>
 
-/* ============================================
-   HEADER & NAV
-   ============================================ */
-
-.fn-header {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  background: rgba(5, 3, 8, 0.96);
-  border-bottom: 1px solid rgba(244, 197, 140, 0.18);
-}
-
-.fn-header-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0.75rem 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.fn-logo {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 1.4rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--accent-soft);
-}
-
-.fn-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.25rem;
-}
-
-.fn-nav a {
-  margin-left: 0.75rem;
-  text-decoration: none;
-  color: var(--muted);
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  transition: color 0.2s;
-}
-
-.fn-nav a:hover {
-  color: var(--accent-soft);
-}
-
-/* ============================================
-   HERO
-   ============================================ */
-
-.fn-hero {
-  padding: 6rem 1.5rem 4rem;
-  text-align: center;
-}
-
-.fn-hero h1 {
-  font-family: "Cormorant Garamond", serif;
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  margin-bottom: 1rem;
-  color: var(--accent-soft);
-  letter-spacing: 0.04em;
-}
-
-.fn-hero p {
-  max-width: 40rem;
-  margin: 0 auto 2rem;
-  font-size: 1.1rem;
-  color: var(--muted);
-  line-height: 1.7;
-}
-
-.fn-hero-btns {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-/* ============================================
-   SECTIONS
-   ============================================ */
-
-.fn-section {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 3.5rem 1.5rem;
-}
-
-.fn-section h2 {
-  font-family: "Cormorant Garamond", serif;
-  font-size: clamp(1.6rem, 3vw, 2rem);
-  margin-bottom: 1rem;
-  color: var(--accent-soft);
-  letter-spacing: 0.04em;
-}
-
-.fn-section h3 {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 1.5rem;
-  color: var(--accent-soft);
-  margin-bottom: 0.5rem;
-}
-
-.fn-section p {
-  color: var(--muted);
-  max-width: 42rem;
-  margin-bottom: 1rem;
-  line-height: 1.7;
-}
-
-.fn-section ul {
-  color: var(--muted);
-  max-width: 42rem;
-  margin-bottom: 1rem;
-  padding-left: 1.5rem;
-  line-height: 1.8;
-}
-
-.fn-section li {
-  margin-bottom: 0.25rem;
-}
-
-/* ============================================
-   CARDS
-   ============================================ */
-
-.fn-card {
-  background: var(--card);
-  border-radius: 1rem;
-  border: 1px solid rgba(244, 197, 140, 0.18);
-  padding: 1.5rem 2rem;
-  margin-bottom: 2rem;
-}
-
-.fn-card-featured {
-  border-color: rgba(228, 107, 60, 0.5);
-  background: linear-gradient(135deg, #1a101a 0%, #2a1010 100%);
-}
-
-/* ============================================
-   EVENT STYLES
-   ============================================ */
-
-.fn-event-tag {
-  display: inline-block;
-  background: var(--accent);
-  color: #140707;
-  font-size: 0.75rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  padding: 0.25rem 0.75rem;
-  border-radius: 999px;
-  margin-bottom: 0.75rem;
-}
-
-.fn-event-date {
-  color: var(--accent-soft) !important;
-  font-weight: 600;
-  margin-bottom: 1rem !important;
-}
-
-/* ============================================
-   SPOTLIGHT SECTION
-   ============================================ */
-
-.fn-spotlight {
-  background: rgba(228, 107, 60, 0.05);
-  border-top: 1px solid rgba(228, 107, 60, 0.2);
-  border-bottom: 1px solid rgba(228, 107, 60, 0.2);
-  max-width: 100%;
-  padding: 3.5rem 1.5rem;
-}
-
-.fn-spotlight > * {
-  max-width: 1100px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* ============================================
-   BUTTONS
-   ============================================ */
-
-.fn-btn {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.8rem 1.8rem;
-  border-radius: 999px;
-  background: var(--accent);
-  color: #140707;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  font-size: 0.85rem;
-  font-weight: bold;
-  text-decoration: none;
-  transition: filter 0.2s;
-}
-
-.fn-btn:hover {
-  filter: brightness(1.1);
-}
-
-.fn-btn-outline {
-  background: transparent;
-  color: var(--accent-soft);
-  border: 1px solid rgba(244, 197, 140, 0.4);
-}
-
-.fn-btn-outline:hover {
-  background: rgba(244, 197, 140, 0.1);
-  filter: none;
-}
-
-/* ============================================
-   CTA SECTION
-   ============================================ */
-
-.fn-cta-section {
-  text-align: center;
-  padding: 4rem 1.5rem;
-}
-
-.fn-cta-section p {
-  margin: 0 auto 1.5rem;
-}
-
-/* ============================================
-   FOOTER
-   ============================================ */
-
-.fn-footer {
-  border-top: 1px solid rgba(244, 197, 140, 0.18);
-  padding: 2.5rem 1.5rem;
-  text-align: center;
-  color: var(--muted);
-  font-size: 0.85rem;
-}
-
-.fn-footer-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.fn-footer-inner p {
-  margin: 0.25rem 0;
-}
-
-.fn-social {
-  margin: 1rem 0;
-  display: flex;
-  gap: 1.5rem;
-  justify-content: center;
-}
-
-.fn-social a {
-  color: var(--accent-soft);
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-size: 0.85rem;
-  transition: color 0.2s;
-}
-
-.fn-social a:hover {
-  color: var(--accent);
-}
-
-.fn-footer-copy {
-  margin-top: 1rem !important;
-  opacity: 0.6;
-}
-
-/* ============================================
-   AIRTABLE EMBEDS
-   ============================================ */
-
-.airtable-embed {
-  border-radius: 1rem;
-  width: 100%;
-}
-
-/* ============================================
-   RESPONSIVE — MOBILE
-   ============================================ */
-
-@media (max-width: 640px) {
-  .fn-hero {
-    padding: 4rem 1.25rem 2.5rem;
-  }
-
-  .fn-nav a {
-    margin-left: 0.5rem;
-    font-size: 0.78rem;
-  }
-
-  .fn-section {
-    padding: 2.5rem 1.25rem;
-  }
-
-  .fn-card {
-    padding: 1.25rem;
-  }
-
-  .fn-hero-btns {
-    flex-direction: column;
-    align-items: center;
-  }
-}
+  <footer class="fn-footer">
+    <div class="fn-footer-inner">
+      <p>Fiery Nights & Tribal Temptations Belly Dance LLC</p>
+      <p>Dry Ridge & Verona, Kentucky</p>
+      <div class="fn-social">
+        <a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a>
+      </div>
+      <p class="fn-footer-copy">© 2026 Fiery Nights & Tribal Temptations Belly Dance LLC. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

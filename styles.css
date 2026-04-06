@@ -1,166 +1,341 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fire Program – Fiery Nights & Tribal Temptations | Northern Kentucky</title>
-  <meta name="description" content="A structured, safety-forward fire dance training pathway in Northern Kentucky. Cold-prop training, supervised light, and performance approval." />
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&display=swap" rel="stylesheet" />
-</head>
-<body class="fn-body">
-  <header class="fn-header">
-    <div class="fn-header-inner">
-      <div class="fn-logo">FN&TT</div>
-      <nav class="fn-nav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="classes.html">Classes</a>
-        <a href="fire-program.html">Fire Program</a>
-        <a href="events.html">Events</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
+/* ============================================
+   FN&TT — Fiery Nights & Tribal Temptations
+   Stylesheet — 2026 Edition
+   ============================================ */
 
-  <main>
-    <section class="fn-hero">
-      <h1>FN&TT Fire Program</h1>
-      <p>
-        A structured, safety-forward pathway for dancers ready to explore fire artistry with intention,
-        responsibility, and ritual awareness.
-      </p>
-    </section>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&display=swap');
 
-    <section class="fn-section">
-      <h2>Program Overview</h2>
-      <div class="fn-card">
-        <p>
-          The FN&TT Fire Program is designed to guide dancers from cold-prop training to supervised light
-          and, eventually, approved fire performance. This pathway emphasizes safety, technique, and
-          personal readiness at every stage.
-        </p>
-        <p>
-          Fire is a powerful element — both creatively and energetically. Our program ensures dancers
-          approach it with respect, grounding, and full understanding of the responsibilities involved.
-        </p>
-        <p>
-          The FN&TT Fire Program follows a four-level certification system. All participants must
-          complete each level before advancing. No exceptions.
-        </p>
-      </div>
-    </section>
+:root {
+  --bg: #0b050b;
+  --accent: #e46b3c;
+  --accent-soft: #f3c28b;
+  --ink: #f7f2ec;
+  --muted: #c9b9aa;
+  --card: #1a101a;
+}
 
-    <section class="fn-section">
-      <h2>Prerequisites</h2>
-      <div class="fn-card">
-        <p><strong>Required before entering the Fire Pathway:</strong></p>
-        <ul>
-          <li>Foundations or equivalent belly dance experience</li>
-          <li>Fire Pathway Prep class (cold-prop training)</li>
-          <li>Understanding of basic safety protocols</li>
-          <li>Demonstrated control, awareness, and consistency in movement</li>
-          <li>Signed fire program waiver and consent forms</li>
-        </ul>
-      </div>
-    </section>
+* {
+  box-sizing: border-box;
+}
 
-    <section class="fn-section">
-      <h2>Cold-Prop Training</h2>
-      <div class="fn-card">
-        <p>
-          Before touching flame, dancers train with non-flammable props to build confidence, control,
-          and muscle memory. This includes:
-        </p>
-        <ul>
-          <li>Grip, posture, and prop handling</li>
-          <li>Basic spins and pathways</li>
-          <li>Choreography integration</li>
-          <li>Emergency stop techniques</li>
-        </ul>
-        <p>Cold-prop mastery is required before moving to supervised light.</p>
-      </div>
-    </section>
+body.fn-body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top, #2a102a 0, #050308 55%, #020104 100%);
+  color: var(--ink);
+}
 
-    <section class="fn-section">
-      <h2>Supervised Light</h2>
-      <div class="fn-card">
-        <p>
-          Once dancers demonstrate readiness, they may participate in supervised light sessions.
-          These sessions are conducted with:
-        </p>
-        <ul>
-          <li>Certified Fire Safety Lead present at all times</li>
-          <li>Controlled outdoor environment</li>
-          <li>Pre-approved fuel and equipment only</li>
-          <li>Strict safety protocols</li>
-          <li>Assigned spotters for each performer</li>
-        </ul>
-        <p>
-          Supervised light is a privilege, not a guarantee. Safety and readiness determine progression.
-        </p>
-      </div>
-    </section>
+/* ============================================
+   HEADER & NAV
+   ============================================ */
 
-    <section class="fn-section">
-      <h2>Performance Approval</h2>
-      <div class="fn-card">
-        <p>
-          Dancers who complete supervised light and demonstrate consistent safety awareness may be approved
-          for fire performance at FN&TT-vetted venues and events. Approval includes:
-        </p>
-        <ul>
-          <li>Technique evaluation</li>
-          <li>Safety knowledge assessment</li>
-          <li>Prop-specific competency</li>
-          <li>Understanding of venue requirements</li>
-          <li>Fire Safety Lead sign-off</li>
-        </ul>
-      </div>
-    </section>
+.fn-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(5, 3, 8, 0.96);
+  border-bottom: 1px solid rgba(244, 197, 140, 0.18);
+}
 
-    <section class="fn-section">
-      <h2>Safety Culture</h2>
-      <div class="fn-card">
-        <p>
-          FN&TT maintains a strict, non-negotiable safety culture. Fire is never treated as a prop —
-          it is an element. Our dancers commit to:
-        </p>
-        <ul>
-          <li>Respect for the element</li>
-          <li>Clear communication at all times</li>
-          <li>Accountability to the team</li>
-          <li>Continuous learning and training</li>
-          <li>Supporting fellow dancers</li>
-          <li>Zero tolerance for unsafe behavior</li>
-        </ul>
-        <p>
-          No performer may burn without a designated Fire Safety Lead present.
-          No exceptions.
-        </p>
-      </div>
-    </section>
+.fn-header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
 
-    <section class="fn-section fn-cta-section">
-      <h2>Ready to Begin?</h2>
-      <p>
-        Start with Fire Pathway Prep or reach out with questions about the FN&TT Fire Program.
-        All inquiries welcome.
-      </p>
-      <a class="fn-btn" href="contact.html">Contact Us</a>
-    </section>
-  </main>
+.fn-logo {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.4rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-soft);
+}
 
-  <footer class="fn-footer">
-    <div class="fn-footer-inner">
-      <p>Fiery Nights & Tribal Temptations Belly Dance LLC</p>
-      <p>Dry Ridge & Verona, Kentucky</p>
-      <div class="fn-social">
-        <a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a>
-        <a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a>
-      </div>
-      <p class="fn-footer-copy">© 2026 Fiery Nights & Tribal Temptations Belly Dance LLC. All rights reserved.</p>
-    </div>
-  </footer>
-</body>
-</html>
+.fn-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.fn-nav a {
+  margin-left: 0.75rem;
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  transition: color 0.2s;
+}
+
+.fn-nav a:hover {
+  color: var(--accent-soft);
+}
+
+/* ============================================
+   HERO
+   ============================================ */
+
+.fn-hero {
+  padding: 6rem 1.5rem 4rem;
+  text-align: center;
+}
+
+.fn-hero h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  margin-bottom: 1rem;
+  color: var(--accent-soft);
+  letter-spacing: 0.04em;
+}
+
+.fn-hero p {
+  max-width: 40rem;
+  margin: 0 auto 2rem;
+  font-size: 1.1rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.fn-hero-btns {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ============================================
+   SECTIONS
+   ============================================ */
+
+.fn-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3.5rem 1.5rem;
+}
+
+.fn-section h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.6rem, 3vw, 2rem);
+  margin-bottom: 1rem;
+  color: var(--accent-soft);
+  letter-spacing: 0.04em;
+}
+
+.fn-section h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.5rem;
+  color: var(--accent-soft);
+  margin-bottom: 0.5rem;
+}
+
+.fn-section p {
+  color: var(--muted);
+  max-width: 42rem;
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+.fn-section ul {
+  color: var(--muted);
+  max-width: 42rem;
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  line-height: 1.8;
+}
+
+.fn-section li {
+  margin-bottom: 0.25rem;
+}
+
+/* ============================================
+   CARDS
+   ============================================ */
+
+.fn-card {
+  background: var(--card);
+  border-radius: 1rem;
+  border: 1px solid rgba(244, 197, 140, 0.18);
+  padding: 1.5rem 2rem;
+  margin-bottom: 2rem;
+}
+
+.fn-card-featured {
+  border-color: rgba(228, 107, 60, 0.5);
+  background: linear-gradient(135deg, #1a101a 0%, #2a1010 100%);
+}
+
+/* ============================================
+   EVENT STYLES
+   ============================================ */
+
+.fn-event-tag {
+  display: inline-block;
+  background: var(--accent);
+  color: #140707;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  margin-bottom: 0.75rem;
+}
+
+.fn-event-date {
+  color: var(--accent-soft) !important;
+  font-weight: 600;
+  margin-bottom: 1rem !important;
+}
+
+/* ============================================
+   SPOTLIGHT SECTION
+   ============================================ */
+
+.fn-spotlight {
+  background: rgba(228, 107, 60, 0.05);
+  border-top: 1px solid rgba(228, 107, 60, 0.2);
+  border-bottom: 1px solid rgba(228, 107, 60, 0.2);
+  max-width: 100%;
+  padding: 3.5rem 1.5rem;
+}
+
+.fn-spotlight > * {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+
+.fn-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.8rem 1.8rem;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #140707;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.85rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: filter 0.2s;
+}
+
+.fn-btn:hover {
+  filter: brightness(1.1);
+}
+
+.fn-btn-outline {
+  background: transparent;
+  color: var(--accent-soft);
+  border: 1px solid rgba(244, 197, 140, 0.4);
+}
+
+.fn-btn-outline:hover {
+  background: rgba(244, 197, 140, 0.1);
+  filter: none;
+}
+
+/* ============================================
+   CTA SECTION
+   ============================================ */
+
+.fn-cta-section {
+  text-align: center;
+  padding: 4rem 1.5rem;
+}
+
+.fn-cta-section p {
+  margin: 0 auto 1.5rem;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+.fn-footer {
+  border-top: 1px solid rgba(244, 197, 140, 0.18);
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.fn-footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.fn-footer-inner p {
+  margin: 0.25rem 0;
+}
+
+.fn-social {
+  margin: 1rem 0;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.fn-social a {
+  color: var(--accent-soft);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.85rem;
+  transition: color 0.2s;
+}
+
+.fn-social a:hover {
+  color: var(--accent);
+}
+
+.fn-footer-copy {
+  margin-top: 1rem !important;
+  opacity: 0.6;
+}
+
+/* ============================================
+   AIRTABLE EMBEDS
+   ============================================ */
+
+.airtable-embed {
+  border-radius: 1rem;
+  width: 100%;
+}
+
+/* ============================================
+   RESPONSIVE — MOBILE
+   ============================================ */
+
+@media (max-width: 640px) {
+  .fn-hero {
+    padding: 4rem 1.25rem 2.5rem;
+  }
+
+  .fn-nav a {
+    margin-left: 0.5rem;
+    font-size: 0.78rem;
+  }
+
+  .fn-section {
+    padding: 2.5rem 1.25rem;
+  }
+
+  .fn-card {
+    padding: 1.25rem;
+  }
+
+  .fn-hero-btns {
+    flex-direction: column;
+    align-items: center;
+  }
+}
