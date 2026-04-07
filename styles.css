@@ -1,6 +1,6 @@
 /* ============================================
    FN&TT — Fiery Nights & Tribal Temptations
-   Stylesheet — 2026 Edition
+   Stylesheet — Final 2026 Edition
    ============================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&display=swap');
@@ -30,8 +30,8 @@ body.fn-body {
 .fn-header {
   position: sticky;
   top: 0;
-  z-index: 100;
-  background: rgba(5, 3, 8, 0.97);
+  z-index: 10;
+  background: rgba(5, 3, 8, 0.96);
   border-bottom: 1px solid rgba(244, 197, 140, 0.18);
 }
 
@@ -42,6 +42,7 @@ body.fn-body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   gap: 0.5rem;
 }
 
@@ -50,10 +51,12 @@ body.fn-body {
   align-items: center;
   gap: 0.75rem;
   text-decoration: none;
-  flex-shrink: 0;
 }
 
-.fn-logo-img { height: 52px; width: auto; }
+.fn-logo-img {
+  height: 52px;
+  width: auto;
+}
 
 .fn-logo-text {
   display: flex;
@@ -77,10 +80,9 @@ body.fn-body {
   color: var(--muted);
 }
 
-/* Desktop nav */
 .fn-nav {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   gap: 0.25rem;
 }
 
@@ -88,59 +90,13 @@ body.fn-body {
   margin-left: 0.75rem;
   text-decoration: none;
   color: var(--muted);
-  font-size: 0.82rem;
+  font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.12em;
   transition: color 0.2s;
-  white-space: nowrap;
 }
 
 .fn-nav a:hover { color: var(--accent-soft); }
-
-/* Hamburger */
-.fn-hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 6px;
-}
-
-.fn-hamburger span {
-  display: block;
-  width: 24px;
-  height: 2px;
-  background: var(--accent-soft);
-  border-radius: 2px;
-  transition: all 0.3s;
-}
-
-/* Mobile drawer */
-.fn-nav-drawer {
-  display: none;
-  flex-direction: column;
-  background: rgba(5, 3, 8, 0.99);
-  border-top: 1px solid rgba(244,197,140,0.15);
-  padding: 1rem 1.5rem 1.5rem;
-}
-
-.fn-nav-drawer.open { display: flex; }
-
-.fn-nav-drawer a {
-  text-decoration: none;
-  color: var(--muted);
-  font-size: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  padding: 0.75rem 0;
-  border-bottom: 1px solid rgba(244,197,140,0.08);
-  transition: color 0.2s;
-}
-
-.fn-nav-drawer a:last-child { border-bottom: none; }
-.fn-nav-drawer a:hover { color: var(--accent-soft); }
 
 /* ============================================
    HERO
@@ -149,6 +105,32 @@ body.fn-body {
 .fn-hero {
   padding: 6rem 1.5rem 4rem;
   text-align: center;
+}
+
+.fn-hero-photo {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 8rem 1.5rem 6rem;
+}
+
+.fn-hero-overlay {
+  position: relative;
+  z-index: 2;
+  background: rgba(5, 3, 8, 0.6);
+  padding: 3rem 2rem;
+  border-radius: 1rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.fn-hero-photo::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(5, 3, 8, 0.5);
+  z-index: 1;
 }
 
 .fn-hero h1 {
@@ -234,145 +216,80 @@ body.fn-body {
 }
 
 /* ============================================
-   SCHEDULE GRID
+   PHOTOS & VIDEO
    ============================================ */
 
-.fn-schedule-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.25rem;
-  margin-bottom: 2rem;
-}
-
-.fn-schedule-card {
-  background: var(--card);
-  border: 1px solid rgba(244,197,140,0.2);
+.fn-photo {
+  width: 100%;
   border-radius: 1rem;
-  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.5rem;
+  object-fit: cover;
+  border: 1px solid rgba(244, 197, 140, 0.18);
 }
 
-.fn-schedule-day {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 1.2rem;
-  color: var(--accent-soft);
-  font-weight: 700;
-  margin-bottom: 0.5rem;
+.fn-photo-round {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(244, 197, 140, 0.3);
+  margin: 0 auto 1.5rem;
+  display: block;
 }
 
-.fn-schedule-time {
-  font-size: 0.95rem;
-  color: var(--ink);
-  margin-bottom: 0.25rem;
+.fn-video {
+  width: 100%;
+  border-radius: 1rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(244, 197, 140, 0.18);
+  max-height: 500px;
 }
 
-.fn-schedule-note {
-  font-size: 0.82rem;
-  color: var(--muted);
-  margin-top: 0.5rem;
-  font-style: italic;
-}
-
-/* ============================================
-   PRICING TABLE
-   ============================================ */
-
-.fn-pricing-grid {
+.fn-photo-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1rem;
   margin-bottom: 2rem;
 }
 
-.fn-price-card {
-  background: var(--card);
-  border: 1px solid rgba(244,197,140,0.2);
+.fn-photo-grid img {
+  width: 100%;
   border-radius: 1rem;
-  padding: 1.5rem;
+  object-fit: cover;
+  border: 1px solid rgba(244, 197, 140, 0.18);
+  height: 250px;
+}
+
+/* ============================================
+   LEVEL BADGES
+   ============================================ */
+
+.fn-badge-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
   text-align: center;
 }
 
-.fn-price-card.featured {
-  border-color: rgba(228,107,60,0.5);
-  background: linear-gradient(135deg, #1a101a 0%, #2a1010 100%);
+.fn-badge-item img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  margin: 0 auto 0.5rem;
+  display: block;
 }
 
-.fn-price-label {
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--muted);
-  margin-bottom: 0.5rem;
-}
-
-.fn-price-amount {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 2.5rem;
+.fn-badge-item p {
   color: var(--accent-soft);
-  line-height: 1;
-  margin-bottom: 0.25rem;
-}
-
-.fn-price-detail {
-  font-size: 0.85rem;
-  color: var(--muted);
-}
-
-/* ============================================
-   WINE CALLOUT
-   ============================================ */
-
-.fn-wine-callout {
-  background: linear-gradient(135deg, #1a0f0a 0%, #0f0a0f 100%);
-  border: 1px solid rgba(228,107,60,0.3);
-  border-radius: 1rem;
-  padding: 1.25rem 1.75rem;
-  margin-bottom: 2rem;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.fn-wine-callout .wine-icon { font-size: 2rem; }
-
-.fn-wine-callout .wine-text h4 {
-  font-family: "Cormorant Garamond", serif;
-  color: var(--accent-soft);
-  font-size: 1.1rem;
-  margin: 0 0 0.25rem;
-}
-
-.fn-wine-callout .wine-text p {
-  color: var(--muted);
+  font-weight: bold;
   font-size: 0.9rem;
   margin: 0;
 }
 
-/* ============================================
-   SOCIAL ICONS
-   ============================================ */
-
-.fn-social-icons {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin: 1rem 0;
-}
-
-.fn-social-icons a {
-  display: inline-block;
-  transition: transform 0.2s, filter 0.2s;
-}
-
-.fn-social-icons a:hover {
-  transform: scale(1.1);
-  filter: brightness(1.2);
-}
-
-.fn-social-icons img {
-  height: 52px;
-  width: auto;
+.fn-badge-item span {
+  color: var(--muted);
+  font-size: 0.8rem;
 }
 
 /* ============================================
@@ -398,15 +315,6 @@ body.fn-body {
   margin-bottom: 1rem !important;
 }
 
-.fn-flyer-img {
-  width: 100%;
-  max-width: 500px;
-  border-radius: 1rem;
-  display: block;
-  margin: 0 auto 1.5rem;
-  border: 1px solid rgba(244,197,140,0.2);
-}
-
 /* ============================================
    SPOTLIGHT
    ============================================ */
@@ -423,92 +331,6 @@ body.fn-body {
   max-width: 1100px;
   margin-left: auto;
   margin-right: auto;
-}
-
-/* ============================================
-   LEVEL BADGES
-   ============================================ */
-
-.fn-badge-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
-  margin-bottom: 2rem;
-}
-
-.fn-badge-item {
-  text-align: center;
-}
-
-.fn-badge-item img {
-  width: 100%;
-  max-width: 200px;
-  border-radius: 50%;
-}
-
-.fn-badge-item p {
-  font-family: "Cormorant Garamond", serif;
-  color: var(--accent-soft);
-  font-size: 1rem;
-  margin: 0.5rem auto 0;
-  text-align: center;
-}
-
-/* ============================================
-   PHOTOS
-   ============================================ */
-
-.fn-photo {
-  width: 100%;
-  border-radius: 1rem;
-  margin-bottom: 1.5rem;
-  object-fit: cover;
-  border: 1px solid rgba(244, 197, 140, 0.18);
-}
-
-.fn-photo-placeholder {
-  width: 100%;
-  border-radius: 1rem;
-  margin-bottom: 1.5rem;
-  border: 1px dashed rgba(244, 197, 140, 0.3);
-  background: rgba(244, 197, 140, 0.05);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--muted);
-  font-size: 0.85rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  text-align: center;
-  padding: 3rem 1rem;
-  min-height: 200px;
-}
-
-.fn-photo-round {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid rgba(244, 197, 140, 0.3);
-  margin: 0 auto 1.5rem;
-  display: block;
-}
-
-.fn-photo-round-placeholder {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  border: 3px dashed rgba(244, 197, 140, 0.3);
-  background: rgba(244, 197, 140, 0.05);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--muted);
-  font-size: 0.75rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  text-align: center;
-  margin: 0 auto 1.5rem;
 }
 
 /* ============================================
@@ -578,20 +400,18 @@ body.fn-body {
   display: flex;
   gap: 1rem;
   justify-content: center;
-  flex-wrap: wrap;
   align-items: center;
+  flex-wrap: wrap;
 }
 
-.fn-social a {
-  color: var(--accent-soft);
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-size: 0.85rem;
-  transition: color 0.2s;
+.fn-social a img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  transition: opacity 0.2s;
 }
 
-.fn-social a:hover { color: var(--accent); }
+.fn-social a img:hover { opacity: 0.8; }
 
 .fn-footer-copy {
   margin-top: 1rem !important;
@@ -611,28 +431,12 @@ body.fn-body {
    RESPONSIVE
    ============================================ */
 
-@media (max-width: 700px) {
-  .fn-nav { display: none; }
-  .fn-hamburger { display: flex; }
-
+@media (max-width: 640px) {
   .fn-hero { padding: 4rem 1.25rem 2.5rem; }
-
+  .fn-nav a { margin-left: 0.5rem; font-size: 0.78rem; }
   .fn-section { padding: 2.5rem 1.25rem; }
-
   .fn-card { padding: 1.25rem; }
-
-  .fn-hero-btns {
-    flex-direction: column;
-    align-items: center;
-  }
-
+  .fn-hero-btns { flex-direction: column; align-items: center; }
   .fn-logo-full { display: none; }
-
-  .fn-pricing-grid { grid-template-columns: 1fr 1fr; }
-
-  .fn-price-amount { font-size: 2rem; }
-}
-
-@media (max-width: 400px) {
-  .fn-pricing-grid { grid-template-columns: 1fr; }
+  .fn-badge-grid { grid-template-columns: repeat(2, 1fr); }
 }
