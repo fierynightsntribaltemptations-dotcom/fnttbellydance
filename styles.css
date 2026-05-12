@@ -108,11 +108,12 @@ body.fn-body {
 }
 
 .fn-hero-photo {
-  background-size: cover;
-  background-position: center;
+  background-size: contain;
+  background-position: center top;
   background-repeat: no-repeat;
   position: relative;
   padding: 8rem 1.5rem 6rem;
+  background-color: #0b050b;
 }
 
 .fn-hero-overlay {
@@ -223,8 +224,10 @@ body.fn-body {
   width: 100%;
   border-radius: 1rem;
   margin-bottom: 1.5rem;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center;
   border: 1px solid rgba(244, 197, 140, 0.18);
+  background: #0b050b;
 }
 
 .fn-photo-round {
@@ -242,7 +245,6 @@ body.fn-body {
   border-radius: 1rem;
   margin-bottom: 1.5rem;
   border: 1px solid rgba(244, 197, 140, 0.18);
-  max-height: 500px;
 }
 
 .fn-photo-grid {
